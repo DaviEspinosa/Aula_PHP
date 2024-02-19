@@ -1,0 +1,4 @@
+Antes de eu fazer qualquer coisa no banco, preciso criar um gerenciador
+de conexões (como o ConnectionFactory do Java)
+
+criar arquivo conectaBD.php

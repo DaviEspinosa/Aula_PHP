@@ -1,0 +1,11 @@
+Vá no site instale a versão mais recente (.zip)
+
+mude o nome de php.ini-development para php.ini
+
+php.ini - gerenciador de depedencias
+composer - para baixar as dependencias completas
+
+editar as variaveis de ambiente (PATH)
+
+agora executar o composer
+  (se der erro ao executar "run time", vá no google e instale a 		atualização do run time)
