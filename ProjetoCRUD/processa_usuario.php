@@ -5,15 +5,14 @@ require_once 'conectaBD.php';
 
 if (!empty($_POST)) {
     // Está chegando dados por POST e então posso tentar inserir no banco
-// Obter as informações do formulário ($_POST)
+    // Obter as informações do formulário ($_POST)
     try {
         // Preparar as informações
-// Montar a SQL (pgsql)
-        $sql = "INSERT INTO usuario
-
-(nome, data_nascimento, telefone, email, senha)
-VALUES
-(:nome, :dataNascimento, :telefone, :email, :senha)";
+        // Montar a SQL (pgsql)
+        $sql = "INSERT INTO usuarios 
+        (nome, data_nascimento, telefone, email, senha) 
+        VALUES 
+        (:nome, :dataNascimento, :telefone, :email, :senha)";
         // Preparar a SQL (pdo)
         $stmt = $pdo->prepare($sql);
         // Definir/organizar os dados p/ SQL
@@ -25,7 +24,7 @@ VALUES
             ':senha' => md5($_POST['senha']) //md5 é um padrão de criptografia
         );
         // Tentar Executar a SQL (INSERT)
-// Realizar a inserção das informações no BD (com o PHP)
+        // Realizar a inserção das informações no BD (com o PHP)
         if ($stmt->execute($dados)) {
             header("Location: index.php?msgSucesso=Cadastro realizado com sucesso!");
         }
@@ -38,4 +37,3 @@ VALUES
 }
 die();
 // Redirecionar para a página inicial (login) c/ mensagem erro/sucesso
-?>
