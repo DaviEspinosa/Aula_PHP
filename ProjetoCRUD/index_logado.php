@@ -1,3 +1,16 @@
+<?php
+require_once 'conectaBD.php';
+
+session_start();
+
+if (empty($_SESSION)){
+    //Significa que as variaveis de SESSAO não foram definidas.
+    //Não pode acessar aqui. o sistema manda voltar para a página de login
+    header('Location: index.php?msgErro= Você precisa se autenticar no sistema.');
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,16 +20,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
 +0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
-<?php
-require_once 'conectaBD.php';
-session_start();
-if (empty($_SESSION)) {
-    // Significa que as variáveis de SESSAO não foram definidas.
-    // Não pode acessar aqui. o sistema manda voltar para a pagina de login
-    header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
-    die();
-}
-?>
 
 <body>
     <div class="container">

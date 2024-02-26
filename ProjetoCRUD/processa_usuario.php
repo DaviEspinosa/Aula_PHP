@@ -21,7 +21,7 @@ if (!empty($_POST)) {
             ':dataNascimento' => $_POST['dataNascimento'],
             ':telefone' => $_POST['telefone'],
             ':email' => $_POST['email'],
-            ':senha' => md5($_POST['senha']) //md5 é um padrão de criptografia
+            ':senha' => md5($_POST['senha']) //md5 é um padrão de criptografia(a senha não ira aparecer no banco de dados)
         );
         // Tentar Executar a SQL (INSERT)
         // Realizar a inserção das informações no BD (com o PHP)

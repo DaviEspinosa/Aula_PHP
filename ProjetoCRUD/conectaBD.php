@@ -4,7 +4,7 @@
 // usuario
 // senha
 $endereco = 'localhost';
-$banco = 'diogonoite';
+$banco = 'postgres';
 $admin = 'postgres';
 $senha = 'postgres';
 try {

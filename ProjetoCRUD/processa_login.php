@@ -22,7 +22,7 @@ if (!empty($_POST)) {
         // Definir/Organizar os dados p/ SQL
         $dados = array(
             ':email' => $_POST['email'],
-            ':senha' => md5($_POST['senha'])
+            ':senha' => sha1($_POST['senha'])
         );
         $stmt->execute($dados);
         //$stmt->execute(array(':email' => $_POST['email'], ':senha' => $_POST['senha']));
@@ -51,3 +51,4 @@ if (!empty($_POST)) {
     header("Location: index.php?msgErro=Você não tem permissão para acessar esta página..");
 }
 die();
+?>
